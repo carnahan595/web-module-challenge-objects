@@ -16,10 +16,10 @@ The function should:
 */
 
 
-function createMenuItem(/*Your code here*/){
-  /*Your code here*/
+function createMenuItem(name, price, category){
+  return{name, price, category}
 }
-
+console.log('task 1a', createMenuItem('tacos', 8, 'Lunch'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -31,7 +31,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+console.log('task 1b', createMenuItem('tapas', 6, 'Brunch'));
+console.log('task 1b', createMenuItem('Lamb Chops', 30, 'Dinner'));
+console.log('task 1n', createMenuItem('gyro', 12, 'Lunch'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -51,9 +53,18 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
+  discount: function(person){
+    if(person === 'teacher' || person === 'student'){
+      return this.price - (this.price * 0.25);
+    }else if (person === 'public'){
+      return this.price - (this.price * 0.10);
+    }else{
+      return 'no discount for you'
+    }
+  }
   
 }
-
+console.log('task 2', burger.discount('teacher'))
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -73,7 +84,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-
+console.log('task 3', reviews[5].feedback)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
@@ -82,6 +93,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 */
 
 
+reviews[7].feedback ='this place is chill with really cool people, great for getting work done on weekdays'
+console.log('task 5', reviews)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that creates an object with name, rating, feedback, add the new review to the end of an array and returns the resulting array. 
@@ -95,11 +108,12 @@ Use the addReview function below to do the following:
 */
 
 
-function addReview(/*Your Code Here */){
+function addReview(reviews, 'mike', 5, 'foos whas niiiiiiiice!'){
   /*Your Code Here */
 }
 
-
+console.log(addReview
+  )
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -203,8 +217,7 @@ function carMaker(/* code here */) {
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo(){
   console.log('its working');
-  return 'bar';
-}
+  return 'bar';}
 module.exports = {
   foo,
   createMenuItem,
